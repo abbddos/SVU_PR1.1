@@ -13,6 +13,7 @@ class Profile extends React.Component{
             error: ''
         };
     }
+    
 
     componentDidMount(){
         this.fetchUserProfile();

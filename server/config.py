@@ -12,7 +12,7 @@ class Config:
     SECRET_KEY = 'thisisasecretkeyforsomereasonidonotlikeatall'
     
     # Allowing CORS from the frontend application's development server
-    CORS_ORIGINS = ["http://localhost:3000"] # This should be adjusted if frontend runs on a different port/domain
+    CORS_ORIGINS = ["http://localhost:3000", " http://10.71.75.244:3000"] # This should be adjusted if frontend runs on a different port/domain
 
     # Secret key for signing password reset and email verification tokens
     SECURITY_PASSWORD_SALT = os.environ.get('SECURITY_PASSWORD_SALT')

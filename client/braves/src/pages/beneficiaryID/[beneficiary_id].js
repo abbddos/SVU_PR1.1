@@ -19,6 +19,7 @@ class BeneficiaryDetailPage extends React.Component {
       error: ''
     };
   }
+  
 
   componentDidMount() {
     const { beneficiary_id } = this.props.router.query;

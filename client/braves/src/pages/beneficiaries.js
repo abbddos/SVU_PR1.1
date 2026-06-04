@@ -58,6 +58,7 @@ class Beneficiaries extends React.Component{
         this.scrollThrottle = null;
         this.scrollCheckCount = 0;
     }
+    
 
     componentDidMount() {
     // Always reset and reload when component mounts
