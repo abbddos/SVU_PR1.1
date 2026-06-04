@@ -68,7 +68,7 @@ checkService = async (serviceId) =>{
                 });
                 return; 
             }
-            const response = await fetch(`http://localhost:5000/api/v1/services/${serviceId}`,{
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/services/${serviceId}`,{
                 method: 'GET',
                 headers:{
                     'Content-Type':'application/json',
@@ -108,7 +108,7 @@ checkService = async (serviceId) =>{
                 });
                 return; 
             }
-            const response = await fetch(`http://localhost:5000/api/v1/beneficiaries/${benId}`,{
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/beneficiaries/${benId}`,{
                 method: 'GET',
                 headers:{
                     'Content-Type':'application/json',
@@ -163,7 +163,7 @@ checkService = async (serviceId) =>{
                         });
                         return; 
                     }
-                    const response = await fetch('http://localhost:5000/api/v1/actions/', {
+                    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/actions/`, {
                         method: 'POST',
                         headers: {
                             'Content-Type':'application/json',
@@ -222,7 +222,7 @@ checkService = async (serviceId) =>{
                         formError: ''
                     });
 
-                    const response = await fetch(`http://localhost:5000/api/v1/actions/undo/${this.state.lastActionId}`, {
+                    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/actions/undo/${this.state.lastActionId}`, {
                         method: "DELETE",
                         headers: {'Content-Type': 'application/json'}
                     });

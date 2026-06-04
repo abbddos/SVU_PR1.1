@@ -59,7 +59,7 @@ class SearchForm extends React.Component{
                 return;
             }
 
-            const response = await fetch("http://localhost:5000/api/v1/beneficiaries/search",{
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/beneficiaries/search`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

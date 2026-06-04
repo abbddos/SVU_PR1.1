@@ -55,7 +55,7 @@ class Navbar extends React.Component{
                 <div className={styles.profileIcon}>
                 {user && user.profile_pic ? (
                     <img 
-                    src={`http://localhost:5000${user.profile_pic}`}
+                    src={`${process.env.NEXT_PUBLIC_API_URL}${user.profile_pic}`}
                     alt="Profile"
                     className={styles.profileImage}
                     />

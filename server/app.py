@@ -10,7 +10,7 @@ def create_app():
     
     # Initialize extensions with app
     cache.init_app(app)
-    CORS(app, resources={r"/*": {"origins": Config.CORS_ORIGINS}})
+    CORS(app, resources={r"/*": {"origins": Config.CORS_ORIGINS}}, supports_credentials=True)
     init_db(app)
     jwt.init_app(app)
     

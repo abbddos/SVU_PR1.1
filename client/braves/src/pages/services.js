@@ -129,7 +129,7 @@ class Services extends React.Component{
                     });
                     return;
                 }
-                const response = await fetch(`http://localhost:5000/api/v1/services/all?page=${this.state.page}&per_page=20`,{
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/services/all?page=${this.state.page}&per_page=20`,{
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -250,10 +250,10 @@ class Services extends React.Component{
         }
         
         if (this.state.isEditing) {
-            url = `http://localhost:5000/api/v1/services/${this.state.editingServiceId}`;
+            url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/services/${this.state.editingServiceId}`;
             method = 'PUT';
         } else {
-            url = 'http://localhost:5000/api/v1/services/';
+            url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/services/`;
             method = 'POST';
         }
         
@@ -341,7 +341,7 @@ class Services extends React.Component{
             });
             return;
         }
-        const response = await fetch(`http://localhost:5000/api/v1/services/${serviceId}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/services/${serviceId}`, {
             method: "DELETE",
             headers: { 
                 "Content-Type": "application/json",

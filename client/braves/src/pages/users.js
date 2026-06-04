@@ -130,7 +130,7 @@ class UsersPage extends React.Component {
       }
       // Cache busting to prevent duplicate API responses
       const response = await fetch(
-        `http://localhost:5000/api/v1/users/all?page=${this.state.page}&per_page=20}`,{
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/users/all?page=${this.state.page}&per_page=20}`,{
           method: 'GET',
           headers: {
                     'Authorization': `Bearer ${token}`,
@@ -225,7 +225,7 @@ class UsersPage extends React.Component {
     const UserEmail = UserData ? UserData.email : '';
     
     try{
-      const response = await fetch(`http://localhost:5000/api/v1/users/reset_password/${userId}`,{
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/users/reset_password/${userId}`,{
         method: "PUT",
         headers: { 
           'Content-Type': "application/json",
@@ -274,10 +274,10 @@ class UsersPage extends React.Component {
       let url, method, body;
       
       if (this.state.isEditing) {
-        url = `http://localhost:5000/api/v1/users/${this.state.editingUserId}`;
+        url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/users/${this.state.editingUserId}`;
         method = 'PUT';
       } else {
-        url = 'http://localhost:5000/api/v1/users/';
+        url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/users/`;
         method = 'POST';
       }
       
@@ -357,7 +357,7 @@ class UsersPage extends React.Component {
         });
         return;
       }
-      const response = await fetch(`http://localhost:5000/api/v1/users/${userId}/status`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/users/${userId}/status`, {
         method: "PATCH",
         headers: { 
           'Content-Type': "application/json",
@@ -407,7 +407,7 @@ class UsersPage extends React.Component {
         });
         return;
       }
-      const response = await fetch(`http://localhost:5000/api/v1/users/${userId}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/users/${userId}`, {
         method: "DELETE",
         headers: { 
           "Content-Type": "application/json",
@@ -450,7 +450,7 @@ class UsersPage extends React.Component {
               <img
                   src={
                         typeof this.state.profile_pic === 'string'
-                        ? `http://localhost:5000${this.state.profile_pic}`
+                        ? `${process.env.NEXT_PUBLIC_API_URL}${this.state.profile_pic}`
                         : URL.createObjectURL(this.state.profile_pic)
                       }
                   alt="Profile"
@@ -576,7 +576,7 @@ class UsersPage extends React.Component {
                   <td className={styles.profileIcon}>
                     {user && user.profile_pic ? (
                       <img 
-                        src={`http://localhost:5000${user.profile_pic}`}
+                        src={`${process.env.NEXT_PUBLIC_API_URL}${user.profile_pic}`}
                         alt="Profile"
                         className={styles.profileImage}
                       />

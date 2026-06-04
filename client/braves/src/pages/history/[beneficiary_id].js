@@ -39,7 +39,7 @@ class BeneficiaryHistory extends React.Component{
                 });
                 return; 
             }
-            const response = await fetch(`http://localhost:5000/api/v1/beneficiaries/${id}`,{
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/beneficiaries/${id}`,{
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -63,7 +63,7 @@ class BeneficiaryHistory extends React.Component{
                 });
                 return; 
             }
-            const response = await fetch(`http://localhost:5000/api/v1/actions/history/${id}`,{
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/actions/history/${id}`,{
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -108,7 +108,7 @@ class BeneficiaryHistory extends React.Component{
                             <div className={styles.beneficiaryPhoto}>
                                 {beneficiary.beneficiary_pic ? (
                                     <img 
-                                        src={`http://localhost:5000${beneficiary.beneficiary_pic}`} 
+                                        src={`${process.env.NEXT_PUBLIC_API_URL}${beneficiary.beneficiary_pic}`} 
                                         alt={`${beneficiary.first_name} ${beneficiary.last_name}`}
                                         className={styles.photo}
                                     />

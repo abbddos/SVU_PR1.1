@@ -85,7 +85,7 @@ class PersonalInfoForm extends React.Component{
                 formData.append('profile_pic', this.state.profile_pic);
             }
 
-            const response = await fetch(`http://localhost:5000/api/v1/users/${userId}`,{
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/users/${userId}`,{
                 method : 'PUT',
                 body: formData,
                 headers:{
@@ -127,7 +127,7 @@ class PersonalInfoForm extends React.Component{
                     <img 
                         src={
                         typeof this.state.profile_pic === 'string' 
-                            ? `http://localhost:5000${this.state.profile_pic}` // Existing image from API
+                            ? `${process.env.NEXT_PUBLIC_API_URL}${this.state.profile_pic}` // Existing image from API
                             : URL.createObjectURL(this.state.profile_pic) // Newly selected file
                         } 
                         alt="Profile" 

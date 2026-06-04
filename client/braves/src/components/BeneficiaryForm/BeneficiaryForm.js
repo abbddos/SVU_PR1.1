@@ -318,10 +318,10 @@ class BeneficiaryForm extends React.Component {
             formData.append('last_updated_by', userEmail);
 
             if (this.props.isEditing && this.props.beneficiaryData && this.props.beneficiaryData.id) {
-                url = `http://localhost:5000/api/v1/beneficiaries/${this.props.beneficiaryData.id}`;
+                url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/beneficiaries/${this.props.beneficiaryData.id}`;
                 method = 'PUT';
             } else {
-                url = 'http://localhost:5000/api/v1/beneficiaries/';
+                url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/beneficiaries/`;
                 method = 'POST';
             }
 
@@ -383,7 +383,7 @@ class BeneficiaryForm extends React.Component {
                                         <img
                                             src={
                                                 typeof this.state.beneficiary_pic === 'string'
-                                                    ? `http://localhost:5000${this.state.beneficiary_pic}`
+                                                    ? `${process.env.NEXT_PUBLIC_API_URL}${this.state.beneficiary_pic}`
                                                     : URL.createObjectURL(this.state.beneficiary_pic)
                                             }
                                             alt="Profile"
