@@ -1,0 +1,245 @@
+.page {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.bid{
+    font-weight: bold;
+}
+
+.tail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.backButton {
+    padding: 10px 20px;
+    width: 700px;
+    background: transparent;
+    color: black;
+    border: 1px solid black;  /* Fixed this line */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.backButton:hover{
+    background: black;
+    color: white;
+    transition: background 0.2s ease;
+}
+
+.backButton:active{
+    background: white;
+    border: 1px solid white;
+    color: black;
+    transition: background 0.2s ease;
+}
+
+
+
+.printButton {
+    width: 700px;
+    height: 50px;
+    padding: 10px 20px;
+    background: rgb(200,0,0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.printButton:hover{
+    background: black;
+    transition: background 0.2s ease;
+}
+
+.printButton:active{
+    color: rgb(200,0,0);
+    background: white;
+    transition: background 0.2s ease;
+}
+
+.card {
+    width: 750px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+}
+
+.ribbon {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: rgb(200,0,0);
+    color: white;
+    padding: 8px 50px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+}
+
+.cardContent {
+    display: flex;
+}
+
+.leftColumn {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benPic {
+    width: 80%;
+    max-width: 350px;
+    aspect-ratio: 1 / 1; /* Forces square */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #eee;
+    margin-top: 31px;
+    margin-bottom: 5px;
+}
+
+.qrPlaceholder {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 14px;
+    background: #f9f9f9;
+}
+
+.details {
+    flex: 1;
+}
+
+.bid {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+.name {
+    font-size: 28px;
+    color: #333;
+    margin: 15px 0 25px 0;
+    font-weight: 600;
+}
+
+.benInfo {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.benInfo tr {
+    border-bottom: 1px solid #eee;
+}
+
+.benInfo tr:last-child {
+    border-bottom: none;
+}
+
+.benInfo td {
+    padding: 12px 5px;
+    font-size: 14px;
+}
+
+.benInfo td:first-child,
+.benInfo td:nth-child(3) {
+    font-weight: bold;
+    color: #555;
+    width: 180px;
+}
+
+.benInfo td:nth-child(2),
+.benInfo td:nth-child(4) {
+    color: #333;
+    width: 200px;
+}
+
+.socialIcons {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.socialIcons a {
+    color: #666;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.socialIcons a:hover {
+    color: #007bff;
+}
+
+.bottomRibbon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgb(200,0,0);
+    border: 1px solid #dee2e6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: default;
+    width: 100%;
+    justify-content: center;
+}
+
+.sarcIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sarcContact {
+    color: white;
+    font-size: 14px;
+}
+
+@media print {
+  .tail {
+    display: none;
+  }
+
+  .noPrint{
+    display: none;
+  }
+
+  #card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white;
+  }
+  
+  /* Add this to force colors */
+  body {
+    background: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

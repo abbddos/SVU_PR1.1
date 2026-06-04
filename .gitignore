@@ -1,0 +1,117 @@
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+
+# Python virtual environment
+server/venv/
+
+# Environment variables & configuration
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+.project
+.classpath
+
+# Testing coverage
+coverage/
+.nyc_output/
+
+# Next.js specific
+.next/
+out/
+build/
+.next/cache/
+.swc/
+
+# Python specific
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Uploaded media / static files - track directories but not files
+#server/static/beneficiaries_pics/*
+#server/static/profile_pics/*
+#!server/static/beneficiaries_pics/.gitkeep
+#!server/static/profile_pics/.gitkeep
+
+# Database files - kept for seed data/baseline (uncomment if you want to ignore)
+# *.db
+# *.sqlite
+# *.sqlite3
+*.db-wal
+*.db-shm
+*.db-journal
+
+# Application specific temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+
+# Debug files
+*.log
+*.pid
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# Secret files
+*.pem
+*.key
+*.crt
+
+# Package manager lock files (optional, uncomment if you want to ignore them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

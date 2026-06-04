@@ -1,0 +1,127 @@
+.dropdownContainer {
+  position: relative;
+  width: 100%;
+  font-family: inherit;
+}
+
+.dropdownHeader {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20px;
+}
+
+.dropdownHeader:hover {
+  border-color: rgb(200,0,0);
+}
+
+.selectedCount {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.arrow {
+  font-size: 12px;
+  color: #6c757d;
+  transition: transform 0.2s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchContainer {
+  padding: 10px;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e1e5e9;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: rgb(200,0,0);
+}
+
+.optionsList {
+  overflow-y: auto;
+  max-height: 250px;
+}
+
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background: #f8f9fa;
+}
+
+.dropdownItem.selected {
+  background: rgba(200, 0, 0, 0.05);
+}
+
+.dropdownItem input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: rgb(200,0,0);
+}
+
+.dropdownItem span {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.selectAll {
+  border-bottom: 1px solid #e1e5e9;
+  font-weight: 500;
+  background: #f8f9fa;
+}
+
+.selectAll:hover {
+  background: #e9ecef;
+}
+
+.noResults {
+  padding: 15px;
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Make sure it works in your filter row */
+:global(.filterRow) .dropdownContainer {
+  width: 100%;
+}

@@ -1,0 +1,463 @@
+/* Add these to your existing Dashboard.module.css */
+
+.dashboard {
+  min-height: 100vh;
+  background: rgb(231,231,231);
+  padding-top: 80px;
+  color: black;
+}
+
+.dashboard h1 {
+  color: rgb(200,0,0);
+  margin-left: 5%;
+  margin-bottom: 25px;
+}
+
+/* Filters Container - matches userForm style */
+.filtersContainer {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  width: 98%;
+  margin-left: 1%;
+  text-align: left;
+}
+
+.filtersContainer h3 {
+  color: rgb(200,0,0);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Filter Row - matches formRow pattern */
+.filterRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.filterRow label {
+  color: rgb(124, 124, 124);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Filter Inputs - matches formInput style */
+.filterInput {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  color: #333;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.filterInput:focus {
+  outline: none;
+  border-color: rgb(200,0,0);
+  box-shadow: 0 0 0 2px rgba(200, 0, 0, 0.1);
+}
+
+/* Button Row - NEW */
+.buttonRow {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Clear Button - matches cancelButton style */
+.clearButton {
+  background: rgb(200,0,0);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.clearButton:hover {
+  background: rgb(80,0,0);
+}
+
+/* Stats - matches lastUpdated style */
+.stats {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background: #f8f9fa;
+  border-left: 4px solid rgb(200,0,0);
+  border-radius: 0 8px 8px 0;
+  width: 98%;
+  margin-left: 1%;
+}
+
+.stats strong {
+  color: #495057;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Results Table Container - matches resultsTable style */
+.dataTable {
+  margin-top: 5px;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 98%;
+  margin-left: 1%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+/* Table - matches table style */
+.dataTable table {
+  width: 100%;
+  border-collapse: collapse;
+  color: black;
+}
+
+.dataTable th {
+  background: #f8f9fa;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: rgb(200,0,0);
+  border-bottom: 2px solid #e1e5e9;
+}
+
+.dataTable td {
+  padding: 1rem;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.dataTable tbody tr:hover {
+  background: #f8f9fa;
+}
+
+/* Loading and Error states */
+.loading, .error, .noData {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  background: white;
+  border-radius: 15px;
+  width: 98%;
+  margin-left: 1%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  color: #c33;
+  background: #fee;
+  border: 1px solid #fcc;
+}
+
+.noData {
+  color: #856404;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+}
+
+/* Dashboard Charts */
+.dashboardCharts {
+  width: 98%;
+  margin-left: 1%;
+}
+
+.kpiRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.kpiRow_1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.kpiCard {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.kpiCard h3 {
+  color: rgb(124, 124, 124);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.kpiValue {
+  color: rgb(200, 0, 0);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.chartsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.chartCard {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chartCard h3 {
+  color: rgb(200, 0, 0);
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.pieRow {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}
+
+.pieThing {
+  flex: 1;
+  min-width: 0;
+  max-width: 50%;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Dropdown styles */
+.dropdownContainer {
+  position: relative;
+  width: 100%;
+  font-family: inherit;
+}
+
+.dropdownHeader {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20px;
+}
+
+.dropdownHeader:hover {
+  border-color: rgb(200,0,0);
+}
+
+.selectedCount {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.arrow {
+  font-size: 12px;
+  color: #6c757d;
+  transition: transform 0.2s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchContainer {
+  padding: 10px;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e1e5e9;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: rgb(200,0,0);
+}
+
+.optionsList {
+  overflow-y: auto;
+  max-height: 250px;
+}
+
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background: #f8f9fa;
+}
+
+.dropdownItem.selected {
+  background: rgba(200, 0, 0, 0.05);
+}
+
+.dropdownItem input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: rgb(200,0,0);
+}
+
+.dropdownItem span {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.selectAll {
+  border-bottom: 1px solid #e1e5e9;
+  font-weight: 500;
+  background: #f8f9fa;
+}
+
+.selectAll:hover {
+  background: #e9ecef;
+}
+
+.noResults {
+  padding: 15px;
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.filterInput[multiple] {
+  height: auto;
+  min-height: 120px;
+  padding: 0.5rem;
+}
+
+.filterInput[multiple] option {
+  padding: 0.5rem;
+  margin: 2px 0;
+  border-radius: 4px;
+}
+
+.filterInput[multiple] option:checked {
+  background: rgb(200,0,0) linear-gradient(0deg, rgb(200,0,0) 0%, rgb(200,0,0) 100%);
+  color: white;
+}
+
+.hint {
+  color: #6c757d;
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: 0.25rem;
+  grid-column: 2;
+}
+
+.activeFilters {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.filterTag {
+  background: rgb(200,0,0);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .filterRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .chartsRow {
+    grid-template-columns: 1fr;
+  }
+  
+  .kpiRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .filterRow {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .dataTable {
+    padding: 1rem;
+  }
+  
+  .dataTable th, 
+  .dataTable td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Optional: If you want a compact view for large tables */
+.dataTable.compact th,
+.dataTable.compact td {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}

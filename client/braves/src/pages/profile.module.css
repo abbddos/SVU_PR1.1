@@ -1,0 +1,19 @@
+.container {
+  min-height: 100vh;
+  background: rgb(231,231,231);
+  padding-top: 80px; /* Adjust based on navbar height */
+  min-height: 100vh;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: black;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}

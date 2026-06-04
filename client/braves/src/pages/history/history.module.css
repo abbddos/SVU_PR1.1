@@ -1,0 +1,331 @@
+.container {
+  min-height: 100vh;
+  background: rgb(231,231,231);
+  padding-top: 80px; /* Adjust based on navbar height */
+  min-height: 100vh;
+  color: black;
+}
+
+
+.content {
+    max-width: 98%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.2rem;
+    color: #f44336;
+}
+
+/* Beneficiary Section */
+.beneficiarySection {
+    margin-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.title {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+}
+
+.beneficiaryId {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.serviceCount {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.beneficiaryCard {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+}
+
+/* Beneficiary Main Layout with Photo */
+.beneficiaryMain {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.beneficiaryPhoto {
+    flex-shrink: 0;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+}
+
+.photoPlaceholder {
+    width: 200px;
+    height: 200px;
+    background-color: #f5f5f5;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.beneficiaryGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.infoGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.infoRow {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.label {
+    font-weight: 600;
+    color: #555;
+    width: 200px;
+    min-width: 140px;
+}
+
+.value {
+    color: #333;
+    flex: 1;
+}
+
+/* Services Section */
+.servicesSection {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+}
+
+.tableContainer {
+    overflow-x: auto;
+}
+
+.servicesTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.servicesTable th {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: rgb(200,0,0);
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.servicesTable td {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.servicesTable tr:hover {
+    background-color: #fafafa;
+}
+
+/*.serviceType {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}*/
+
+.noServices {
+    text-align: center;
+    padding: 3rem;
+    color: #999;
+    font-size: 1rem;
+}
+
+.backButton {
+  background: rgb(200,0,0);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.backButton:hover:not(:disabled) {
+  background: black;
+  transform: translateY(-2px);
+}
+
+.backBottom:active{
+    background: white;
+    color: rgb(200,0,0);
+    transform: translateY(-2px);
+}
+
+.editButton{
+  background: rgb(0,110,0);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.editButton:hover {
+  background: rgb(0, 70, 0);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.editButton:active{
+background: white;
+  color: rgb(0,110,0);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.viewButton {
+  background: rgb(0,0,200);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.viewButton:hover {
+  background: rgb(0, 0, 80);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.viewButton:active {
+  background: white;
+  color: rgb(0,0,200);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.navigation{
+    margin-top:25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .beneficiaryMain {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .beneficiaryPhoto {
+        margin-bottom: 1rem;
+    }
+    
+    .photo, .photoPlaceholder {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .beneficiaryGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .infoRow {
+        flex-direction: column;
+    }
+    
+    .label {
+        width: auto;
+        margin-bottom: 0.25rem;
+    }
+    
+    .servicesTable th,
+    .servicesTable td {
+        padding: 0.75rem;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

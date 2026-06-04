@@ -1,0 +1,42 @@
+.sideNavMain {
+  position:static;
+  top: 0;
+  left: 0;
+  height: 15vh;
+  width: 250px;
+  background-color: white;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  box-sizing: border-box;
+  margin-left: 25px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  float: left;
+}
+
+.sideNavLink {
+  flex: 0 0 auto; /* Don't grow or shrink */
+  padding: 15px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s;
+  border-radius: 10px;
+}
+
+.sideNavLink:hover {
+  background-color: rgb(200,0,0);
+  color: white;
+}
+
+.sideNavLink:active {
+    background-color: black;
+    color: white;
+}
+
+.sideNavLink:last-child {
+  border-bottom: none;
+}
