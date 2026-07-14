@@ -47,6 +47,7 @@ class Login extends React.Component {
         error: 'Network error - cannot reach server',
         loading: false
       });
+      
     }
   }
 
